@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { observer } from 'mobx-react-lite'; //чтобы mobx иог отслеживать изменения
+import { observer } from 'mobx-react-lite'; 
 import { Button, ListGroup } from 'react-bootstrap'
 import { Context } from '../index';
 

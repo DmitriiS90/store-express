@@ -1,7 +1,6 @@
-//создаем все роуты
 import React, { useContext } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom'
-import { Context } from '../index';  // импортируем контекст
+import { Context } from '../index';  
 import { authRoutes, publicRoutes } from '../routes';
 import { SHOP_ROUTE } from '../utils/consts';
 

@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Col, Card } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
-import { useHistory } from 'react-router-dom';// позволяет перемещаться по сайту
+import { useHistory } from 'react-router-dom';
 import star from '../assets/star.png'
 import { DEVICE_ROUTE } from '../utils/consts';
 
 const DeviceItem = ({device}) => {
     const history = useHistory() 
-    //console.log(history)
+    
     return (
         <Col md={3} className={"mt-2"} onClick={() => {history.push(DEVICE_ROUTE + "/" + device.id)}}>
             <Card style={{width:150, cursor:"pointer" }} border={"light"}>

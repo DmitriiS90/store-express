@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from '../utils/consts';
-import { observer } from 'mobx-react-lite'; //чтобы mobx иог отслеживать изменения
+import { observer } from 'mobx-react-lite'; 
 import { useHistory } from 'react-router-dom';
 
 const NavBar = observer(() => {

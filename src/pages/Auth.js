@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';  //useLocation позволяет видеть данные локации
+import { NavLink, useHistory, useLocation } from 'react-router-dom';  
 import { observer } from 'mobx-react-lite';
 import { Container, Form, Card, Button, Row } from 'react-bootstrap';
 import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from '../utils/consts';
@@ -10,7 +10,7 @@ const Auth = observer(() => {
     const { user } = useContext(Context)
     const history = useHistory()
     const location = useLocation()
-    const isLogin = location.pathname === LOGIN_ROUTE  //пользователь залогинен если путь строго равен '/login'
+    const isLogin = location.pathname === LOGIN_ROUTE  
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 

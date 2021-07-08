@@ -7,7 +7,7 @@ import { observer } from 'mobx-react-lite';
 
 const Pages = observer(() => {
     const { device } = useContext(Context)
-    //const pages = [1, 2, 3, 4, 5]
+    
     const pageCount = Math.ceil(device.totalCount / device.limit)
     const pages = []
 

@@ -3,7 +3,7 @@ import { Button, Modal, Form } from 'react-bootstrap'
 import { createType } from '../../http/deviceAPI';
 import { Context } from '../../index';
 
-const CreateType = ({ show, onHide }) => { //show отвечает виден компонент или нет //onHide скрывает модальное окно
+const CreateType = ({ show, onHide }) => { 
     const { device } = useContext(Context)
     const [value, setValue] = useState("")
 

@@ -6,17 +6,9 @@ import star from '../assets/star.png'
 import { fetchOneDevice } from '../http/deviceAPI';
 
 const DevicePage = () => {
-    // const device = { id: 1, name: 'Redmi', price: 1200, rating: 4, img: 'https://static.pleer.ru/i/p/793127/793127m.jpg' }
-    // const description = [
-    //     { id: 1, title: "Оперативная память", description: "8 ГБ" },
-    //     { id: 2, title: "Процессор", description: "M1" },
-    //     { id: 3, title: "Камара", description: "8 МП" },
-    //     { id: 3, title: "Аккумулятор", description: "8000" },
-    //     { id: 3, title: "Экран", description: "7" },
-    // ]
     
     const [device, setDevice] = useState({ info:[] })
-    const {id} = useParams() // вытаскиваем id из params - http://localhost:3000/device/1
+    const {id} = useParams() 
     
     useEffect(() => {
        fetchOneDevice(id).then(data => setDevice(data))

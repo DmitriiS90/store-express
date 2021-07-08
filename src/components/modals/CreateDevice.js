@@ -10,12 +10,10 @@ const CreateDevice = observer(({ show, onHide }) => {
     const [name, setName] = useState("")
     const [price, setPrice] = useState(0)
     const [file, setFile] = useState(null)
-    //const [brand, setBrand] = useState(null) setSelectedBrand
-    //const [type, setType] = useState(null)
 
     useEffect(() => {
-        fetchTypes().then(data => device.setTypes(data))  // получаем типы
-        fetchBrands().then(data => device.setBrands(data))  // получаем бренды
+        fetchTypes().then(data => device.setTypes(data))  
+        fetchBrands().then(data => device.setBrands(data))  
     }, [])
 
     const addInfo = () => {
@@ -35,15 +33,15 @@ const CreateDevice = observer(({ show, onHide }) => {
     }
 
     const addDevice = (name) => {
-        //console.log(info)
+        
         const formData = new FormData()
-        formData.append("name", name) // 1 - ключ 2 - значение
+        formData.append("name", name) 
         formData.append("price", `${price}`)
         formData.append("img", file)
         formData.append("brandId", device.selectedBrand.id)
         formData.append("typeId", device.selectedType.id)
         formData.append("info", JSON.stringify(info))
-        createDevice(formData).then(data => onHide()) //если запрос успешен, закрываем модальное окно
+        createDevice(formData).then(data => onHide()) 
     }
     return (
         <Modal
